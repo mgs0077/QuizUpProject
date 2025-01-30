@@ -9,4 +9,12 @@
     <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
     <string name="boton_registro">Regístrate</string>
     <string name="registro">Registro</string>
+    <string name="crear_sala">Crear Sala</string>
+    <string name="nombre_de_la_sala">Nombre de la sala</string>
+    <string name="introduce_el_nombre_de_tu_sala">Introduce el nombre de tu sala</string>
+    <string name="introduce_contrase_a_para_la_sala">Introduce contraseña para la sala</string>
+    <string name="unirse_a_una_sala">Unirse a una sala</string>
+    <string name="esperando_a_que_inicie_el_juego">Esperando a que inicie el juego...</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="introduce_tu_nombre_de_usuario">Introduce tu nombre de usuario</string>
 </resources>
