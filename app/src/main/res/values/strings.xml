@@ -17,4 +17,16 @@
     <string name="esperando_a_que_inicie_el_juego">Esperando a que inicie el juego...</string>
     <string name="nombre_de_usuario">Nombre de usuario</string>
     <string name="introduce_tu_nombre_de_usuario">Introduce tu nombre de usuario</string>
+    <string name="bienvenido_al_juego">¡Bienvenido al juego!</string>
+    <string name="tu_casilla_actual">Tu casilla actual:</string>
+    <string name="casilla_actual">Casilla actual</string>
+    <string name="casilla_anterior">Casilla anterior:</string>
+    <string name="img_casilla_anterior">Casilla anterior</string>
+    <string name="casilla_posterior">Casilla posterior:</string>
+    <string name="img_casilla_posterior">Casilla posterior</string>
+    <string name="jugador1">Jugador1</string>
+    <string name="jugador2">Jugador2</string>
+    <string name="jugador3">Jugador3</string>
+    <string name="jugador4">Jugador4</string>
+    <string name="jugadores_en_la_sala">Jugadores en la sala:</string>
 </resources>
