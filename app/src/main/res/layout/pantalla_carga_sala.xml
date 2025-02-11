@@ -21,30 +21,31 @@
         app:layout_constraintVertical_bias="0.323" />
 
     <TextView
+        android:id="@+id/textView8"
         android:layout_width="250dp"
         android:layout_height="100dp"
+        android:fontFamily="@font/russo_one"
         android:gravity="center"
         android:text="@string/quizup"
         android:textColor="@color/white"
-        android:fontFamily="@font/russo_one"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <TextView
-        android:layout_width="400dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="156dp"
         android:fontFamily="@font/russo_one"
+        android:maxWidth="300dp"
         android:gravity="center"
         android:text="@string/esperando_a_que_inicie_el_juego"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

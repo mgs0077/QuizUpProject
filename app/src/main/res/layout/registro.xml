@@ -59,14 +59,12 @@
         android:layout_height="48dp"
         android:background="@color/white"
         android:gravity="center"
-        android:text="@string/introduce_tu_nombre_de_usuario"
+        android:hint="@string/introduce_tu_nombre_de_usuario"
+        android:textColorHint="@color/black"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.449" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
         android:id="@+id/textView3"
@@ -90,14 +88,12 @@
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:background="#FFFFFF"
-        android:text="@string/introduce_tu_correo"
+        android:hint="@string/introduce_tu_correo"
+        android:textColorHint="@color/black"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.619" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textview4"
@@ -119,14 +115,12 @@
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:background="@color/white"
-        android:text="@string/introduce_tu_contrase_a"
+        android:hint="@string/introduce_tu_contrase_a"
+        android:textColorHint="@color/black"
         android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.789" />
+        app:layout_constraintTop_toBottomOf="@+id/textview4" />
 
     <ImageView
         android:id="@+id/crearcuenta"

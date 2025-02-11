@@ -32,12 +32,6 @@ public class InicioSesionActivity extends Activity {
         loginButton = findViewById(R.id.botoniniciarsesion); // Botón de inicio de sesión
         registerButton = findViewById(R.id.botonregistrarse); // Texto de "Registrarse"
 
-        // Verificar si ya hay una sesión iniciada
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-            goToCrearUnirseActivity();
-        }
-
         // Botón para iniciar sesión
         loginButton.setOnClickListener(view -> loginUser());
 
