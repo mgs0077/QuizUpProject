@@ -92,6 +92,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
+        android:id="@+id/boton_crear_sesion"
         android:layout_width="268dp"
         android:layout_height="74dp"
         android:layout_marginBottom="88dp"

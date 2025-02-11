@@ -29,10 +29,16 @@
             android:exported="true" />
 
         <activity
+            android:name=".CrearSalaActivity"
+            android:exported="true" />
+
+        <activity
             android:name=".InicioSesionActivity"
             android:exported="true" />
 
-        <activity android:name=".CrearUnirseActivity" />
+        <activity android:name=".CrearUnirseActivity"
+            android:exported="true" />
+
 
 
     </application>
