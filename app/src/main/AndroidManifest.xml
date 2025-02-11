@@ -39,6 +39,36 @@
         <activity android:name=".CrearUnirseActivity"
             android:exported="true" />
 
+        <activity android:name=".CasillaActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaAngelActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaArteActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaBaseActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaCineActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaDemonioActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaGeografiaActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaHistoriaActivity"
+            android:exported="true" />
+
+        <activity android:name=".PreguntaMusicaActivity"
+            android:exported="true" />
+
+        <activity android:name=".VictoriaActivity"
+            android:exported="true" />
+
 
 
     </application>
