@@ -40,4 +40,9 @@
     <string name="categor_a_geograf_a">Categoría Geografía</string>
     <string name="categor_a_m_sica">Categoría Música</string>
     <string name="categor_a_historia">Categoría Historia</string>
+    <string name="imagen_historia">Imagen historia</string>
+    <string name="logo">Logo</string>
+    <string name="imagen_demonio">Imagen Demonio</string>
+    <string name="categor_a_f_cil">Categoría Fácil</string>
+    <string name="foto_angel">Foto angel</string>
 </resources>

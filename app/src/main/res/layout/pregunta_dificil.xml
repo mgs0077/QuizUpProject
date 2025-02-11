@@ -25,6 +25,7 @@
         android:layout_height="165dp"
         android:src="@drawable/foto_demon"
         app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/imagen_demonio"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
