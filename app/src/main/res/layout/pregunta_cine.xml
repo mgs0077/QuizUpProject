@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pantalla_pregunta_angel">
+    android:background="@drawable/pantalla_cine_background">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/russo_one"
         android:gravity="center"
-        android:text="Categoría Fácil"
+        android:text="@string/categor_a_cine"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,7 +23,7 @@
     <ImageView
         android:layout_width="173dp"
         android:layout_height="165dp"
-        android:src="@drawable/foto_angel"
+        android:src="@drawable/foto_cine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,13 +34,13 @@
         android:id="@+id/textPregunta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/preguntafacil_background"
+        android:background="@drawable/preguntacine_background"
         android:fontFamily="@font/russo_one"
         android:gravity="center"
         android:padding="12dp"
+        android:maxWidth="300dp"
         android:minWidth="120dp"
         android:minHeight="50dp"
-        android:maxWidth="300dp"
         android:text="@string/pregunta_x"
         android:textColor="@color/white"
         android:textSize="30sp"

@@ -30,4 +30,14 @@
     <string name="jugador4">Jugador4</string>
     <string name="jugadores_en_la_sala">Jugadores en la sala:</string>
     <string name="pregunta_x">Pregunta x</string>
+    <string name="respuesta_a">Respuesta a</string>
+    <string name="respuesta_b">Respuesta b</string>
+    <string name="respuesta_c">Respuesta c</string>
+    <string name="respuesta_d">Respuesta d</string>
+    <string name="categor_a_dif_cil">Categoría Difícil</string>
+    <string name="categor_a_de_arte">Categoría de arte</string>
+    <string name="categor_a_cine">Categoría Cine</string>
+    <string name="categor_a_geograf_a">Categoría Geografía</string>
+    <string name="categor_a_m_sica">Categoría Música</string>
+    <string name="categor_a_historia">Categoría Historia</string>
 </resources>
