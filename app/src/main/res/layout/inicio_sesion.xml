@@ -63,7 +63,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/introducircontrasena"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:layout_marginBottom="244dp"
@@ -91,7 +90,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/botoniniciarsesion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="148dp"
