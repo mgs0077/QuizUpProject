@@ -29,4 +29,5 @@
     <string name="jugador3">Jugador3</string>
     <string name="jugador4">Jugador4</string>
     <string name="jugadores_en_la_sala">Jugadores en la sala:</string>
+    <string name="pregunta_x">Pregunta x</string>
 </resources>
