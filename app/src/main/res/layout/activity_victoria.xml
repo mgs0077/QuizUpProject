@@ -2,15 +2,19 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@drawable/degradado">
 
     <TextView
         android:id="@+id/victoria_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/russo_one"
         android:text="@string/felicidades_has_ganado"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
+        android:textSize="45sp"
+        android:maxWidth="300dp"
+        android:textColor="@android:color/white"
         android:layout_centerInParent="true"
-        android:textAlignment="center"/>
+        android:textAlignment="center"
+        />
+
 </RelativeLayout>
