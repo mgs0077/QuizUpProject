@@ -16,7 +16,9 @@ public class CrearUnirseActivity extends AppCompatActivity {
 
         // Referencia al botón "Crear Sala"
         ImageView botonCrear = findViewById(R.id.botoncrear); // Verifica que este ID exista en XML
+        ImageView botonUnirse = findViewById(R.id.botonUnirse); // Referencia al botón "Unirse"
 
+        // Acción al hacer clic en "Crear Sala"
         if (botonCrear != null) {
             botonCrear.setOnClickListener(v -> {
                 try {
@@ -30,6 +32,22 @@ public class CrearUnirseActivity extends AppCompatActivity {
             });
         } else {
             Log.e("CrearUnirseActivity", "Error: botonCrear es null. Verifica el ID en el XML.");
+        }
+
+        // Acción al hacer clic en "Unirse"
+        if (botonUnirse != null) {
+            botonUnirse.setOnClickListener(v -> {
+                try {
+                    // Redirigir a la actividad UnirseSalaActivity
+                    Intent intent = new Intent(CrearUnirseActivity.this, UnirseSalaActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    Log.e("CrearUnirseActivity", "Error al iniciar UnirseSalaActivity: " + e.getMessage());
+                }
+            });
+        } else {
+            Log.e("CrearUnirseActivity", "Error: botonUnirse es null. Verifica el ID en el XML.");
         }
     }
 }

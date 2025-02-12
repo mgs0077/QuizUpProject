@@ -69,6 +69,10 @@
         <activity android:name=".VictoriaActivity"
             android:exported="true" />
 
+        <activity android:name=".UnirseSalaActivity"
+            android:exported="true" />
+
+
 
 
     </application>
