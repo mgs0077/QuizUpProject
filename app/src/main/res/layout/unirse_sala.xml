@@ -38,51 +38,19 @@
         app:layout_constraintVertical_bias="0.287" />
 
     <EditText
-        android:id="@+id/introducir_correo"
-        android:layout_width="300dp"
-        android:layout_height="48dp"
-        android:background="#FFFFFF"
-        android:hint="@string/introduce_el_nombre_de_tu_sala"
-        android:textColorHint="@color/black"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.467" />
-
-    <EditText
         android:id="@+id/editText2"
         android:layout_width="300dp"
         android:layout_height="48dp"
         android:background="@color/white"
-        android:hint="@string/introduce_contrase_a_para_la_sala"
-        android:textColorHint="@color/black"
+        android:hint="@string/introduce_el_codigo_de_la_sala"
         android:textAlignment="center"
+        android:textColorHint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/russo_one"
-        android:gravity="center"
-        android:text="@string/nombre_de_la_sala"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.54" />
 
     <TextView
         android:id="@+id/textview4"
@@ -90,14 +58,14 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/russo_one"
         android:gravity="center"
-        android:text="@string/contrase_a"
+        android:text="@string/codigo_de_la_sala"
         android:textColor="@color/white"
         android:textSize="35sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.614" />
+        app:layout_constraintVertical_bias="0.449" />
 
     <ImageView
         android:layout_width="268dp"

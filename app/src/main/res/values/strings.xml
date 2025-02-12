@@ -46,4 +46,8 @@
     <string name="categor_a_f_cil">Categoría Fácil</string>
     <string name="foto_angel">Foto angel</string>
     <string name="felicidades_has_ganado">¡Felicidades, has ganado!</string>
+    <string name="c_digo_de_sala">Código de sala</string>
+    <string name="introduce_el_c_digo_de_la_sala">Introduce el código de la sala</string>
+    <string name="codigo_de_la_sala">Codigo de la sala</string>
+    <string name="introduce_el_codigo_de_la_sala">Introduce el codigo de la sala</string>
 </resources>
