@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permiso de Internet -->
+    <uses-permission
+        android:name="android.permission.INTERNET"
+        tools:ignore="ManifestOrder" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuizUpProject"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <!-- SplashActivity es la primera pantalla al abrir la app -->
@@ -23,57 +29,22 @@
             </intent-filter>
         </activity>
 
-        <!-- MainActivity (Pantalla principal) -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".CrearSalaActivity"
-            android:exported="true" />
-
-        <activity
-            android:name=".InicioSesionActivity"
-            android:exported="true" />
-
-        <activity android:name=".CrearUnirseActivity"
-            android:exported="true" />
-
-        <activity android:name=".CasillaActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaAngelActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaArteActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaBaseActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaCineActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaDemonioActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaGeografiaActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaHistoriaActivity"
-            android:exported="true" />
-
-        <activity android:name=".PreguntaMusicaActivity"
-            android:exported="true" />
-
-        <activity android:name=".VictoriaActivity"
-            android:exported="true" />
-
-        <activity android:name=".UnirseSalaActivity"
-            android:exported="true" />
-
-
-
+        <!-- Otras actividades -->
+        <activity android:name=".MainActivity" android:exported="true" />
+        <activity android:name=".CrearSalaActivity" android:exported="true" />
+        <activity android:name=".InicioSesionActivity" android:exported="true" />
+        <activity android:name=".CrearUnirseActivity" android:exported="true" />
+        <activity android:name=".CasillaActivity" android:exported="true" />
+        <activity android:name=".PreguntaAngelActivity" android:exported="true" />
+        <activity android:name=".PreguntaArteActivity" android:exported="true" />
+        <activity android:name=".PreguntaBaseActivity" android:exported="true" />
+        <activity android:name=".PreguntaCineActivity" android:exported="true" />
+        <activity android:name=".PreguntaDemonioActivity" android:exported="true" />
+        <activity android:name=".PreguntaGeografiaActivity" android:exported="true" />
+        <activity android:name=".PreguntaHistoriaActivity" android:exported="true" />
+        <activity android:name=".PreguntaMusicaActivity" android:exported="true" />
+        <activity android:name=".VictoriaActivity" android:exported="true" />
+        <activity android:name=".UnirseSalaActivity" android:exported="true" />
 
     </application>
 

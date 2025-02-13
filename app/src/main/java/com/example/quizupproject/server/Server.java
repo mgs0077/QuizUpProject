@@ -4,60 +4,49 @@ import java.io.*;
 import java.net.*;
 import java.util.*;
 import java.util.concurrent.Semaphore;
-import java.util.Scanner;  // Importar Scanner para leer desde la consola
+import java.util.Scanner;
 
 public class Server {
     private static final int PORT = 56210;
     private static final int MAX_PLAYERS = 4;
-    private static Semaphore semaphore = new Semaphore(MAX_PLAYERS);  // Controla el número máximo de jugadores
+    private static Semaphore semaphore = new Semaphore(MAX_PLAYERS);
     private static List<ClientHandler> players = Collections.synchronizedList(new ArrayList<>());
-    private static int turnoActual = -1;
-    private static String codigoSala;  // Usar String para manejar contraseñas
+    private static String codigoSala;
 
-    // Método principal para iniciar el servidor
     public static void main(String[] args) {
-        // Crear un Scanner para leer desde la consola
         Scanner scanner = new Scanner(System.in);
 
-        // Solicitar al usuario que ingrese un código para la sala
         System.out.print("Ingrese el código de la sala: ");
-        String codigoIngresado = scanner.nextLine();  // Leer el código de sala
+        String codigoIngresado = scanner.nextLine().trim();
 
-        // Validar que el código ingresado no esté vacío
         if (codigoIngresado.isEmpty()) {
-            System.out.println("El código de sala no puede estar vacío. Usando el valor predeterminado '12345'.");
-            codigoIngresado = "12345";  // Asignar un valor predeterminado si el usuario no proporciona uno
+            System.out.println("El código de sala no puede estar vacío. Usando '12345' por defecto.");
+            codigoIngresado = "12345";
         }
 
-        // Crear instancia del servidor e iniciar con el código de sala proporcionado
         Server server = new Server();
-        server.iniciarServidor(codigoIngresado);  // Pasar el código de la sala ingresado por el usuario
+        server.iniciarServidor(codigoIngresado);
     }
 
-    // Método para iniciar el servidor con un código de sala
     public void iniciarServidor(String codigoSala) {
-        Server.codigoSala = codigoSala;  // Asignar el código de sala
+        Server.codigoSala = codigoSala;
+        System.out.println("Código de sala asignado en el servidor: " + Server.codigoSala);
 
         try (ServerSocket serverSocket = new ServerSocket(PORT, 50, InetAddress.getByName("0.0.0.0"))) {
-            System.out.println("Servidor iniciado. Esperando conexiones en el puerto " + PORT + "...");
+            System.out.println("Servidor iniciado en el puerto " + PORT + " con código de sala: " + codigoSala);
 
             while (true) {
-                // Aceptar conexiones de los clientes
                 Socket clientSocket = serverSocket.accept();
 
-                // Si el servidor no está lleno, se acepta la conexión
                 if (semaphore.tryAcquire()) {
                     System.out.println("Cliente conectado: " + clientSocket.getInetAddress());
 
-                    // Crear el manejador de clientes
                     ClientHandler player = new ClientHandler(clientSocket);
                     synchronized (players) {
-                        players.add(player);  // Añadir el nuevo jugador a la lista
+                        players.add(player);
                     }
-                    new Thread(player).start();  // Iniciar el hilo que manejará la comunicación con el cliente
-
+                    new Thread(player).start();
                 } else {
-                    // Si el servidor está lleno, se rechaza la conexión
                     DataOutputStream out = new DataOutputStream(clientSocket.getOutputStream());
                     out.writeUTF("Servidor lleno. Inténtelo más tarde.");
                     clientSocket.close();
@@ -68,7 +57,6 @@ public class Server {
         }
     }
 
-    // Clase interna que maneja la comunicación con los clientes
     static class ClientHandler implements Runnable {
         private Socket clientSocket;
         private DataInputStream in;
@@ -81,34 +69,35 @@ public class Server {
         @Override
         public void run() {
             try {
-                // Establecer flujo de entrada y salida
                 in = new DataInputStream(clientSocket.getInputStream());
                 out = new DataOutputStream(clientSocket.getOutputStream());
 
-                // Leer la solicitud del cliente (puede ser "CREAR_SALA" o "UNIRSE_SALA")
                 String tipoSolicitud = in.readUTF();
+                System.out.println("Tipo de solicitud recibida: " + tipoSolicitud);
 
-                // Si el cliente quiere crear una sala
                 if ("CREAR_SALA".equals(tipoSolicitud)) {
-                    out.writeUTF("OK");  // Confirmar que la sala fue creada
+                    out.writeUTF("OK");
                     out.flush();
-                }
-                // Si el cliente quiere unirse a una sala existente
-                else if ("UNIRSE_SALA".equals(tipoSolicitud)) {
-                    String codigoIntentado = in.readUTF();  // Leer el código de sala que el cliente proporciona
+                    System.out.println("Sala creada exitosamente.");
+                } else if ("UNIRSE_SALA".equals(tipoSolicitud)) {
+                    String codigoIntentado = in.readUTF().trim();
+                    System.out.println("Código recibido del cliente: [" + codigoIntentado + "]");
+                    System.out.println("Código de sala en el servidor: [" + codigoSala + "]");
+
                     if (codigoIntentado.equals(codigoSala)) {
-                        out.writeUTF("OK");  // Código correcto
+                        out.writeUTF("OK");
                         out.flush();
-                        // Aquí puedes agregar más lógica para gestionar al jugador dentro de la sala
+                        System.out.println("Cliente unido a la sala.");
                     } else {
-                        out.writeUTF("Código de sala incorrecto");  // Si el código es incorrecto
+                        out.writeUTF("Código de sala incorrecto");
                         out.flush();
-                        clientSocket.close();  // Cerrar la conexión con el cliente
+                        System.out.println("Código de sala incorrecto. Cerrando conexión.");
+                        clientSocket.close();
                     }
                 }
 
-                // Enviar el código de la sala al cliente
-                out.writeUTF("Código de sala: " + codigoSala);  // Enviar el código de la sala
+                // Enviar el código de sala al cliente
+                out.writeUTF("Código de sala en servidor: " + codigoSala);
                 out.flush();
 
             } catch (IOException e) {

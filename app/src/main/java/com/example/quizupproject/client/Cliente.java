@@ -74,11 +74,14 @@ public class Cliente {
 
                 // Enviar solicitud para unirse a la sala con el código
                 out.writeUTF("UNIRSE_SALA");
-                out.writeUTF(codigoSala);
+                out.writeUTF(codigoSala.trim()); // Se asegura de eliminar posibles espacios al principio o final
                 out.flush();
+                System.out.println("Código enviado al servidor: [" + codigoSala + "]");
 
                 // Esperar respuesta del servidor
                 String response = in.readUTF();
+                System.out.println("Respuesta del servidor: " + response);
+
                 if ("OK".equals(response)) {
                     System.out.println("Unido a la sala con éxito.");
                     escucharServidor();
